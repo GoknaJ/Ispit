@@ -11,7 +11,7 @@ namespace Ispit.Konzola
 
             IUcenik[] ucenici = new IUcenik[3];
 
-            Console.WriteLine("Unesi 3 učenika:");
+            Console.WriteLine("Unesi 3 učenika:\n");
 
             for (int i = 0; i < 3; i++)
             {
@@ -29,10 +29,11 @@ namespace Ispit.Konzola
                 ucenici[i] = ucenik;
             }
 
-            Console.WriteLine("Podaci učenika:");
+            Console.WriteLine("\nPodaci učenika:");
             foreach (IUcenik ucenik in ucenici)
             {
-                Console.WriteLine($"Ime: {ucenik.Ime}, Prezime: {ucenik.Prezime}, Datum rođenja: {ucenik.DatumRodenja}, Starost: {ucenik.Starost()}, Ispis prosjeka: {ucenik.IspisProsjeka()}");
+                Console.WriteLine($"\nUčenik:\t{ucenik.Ime} {ucenik.Prezime}");
+                Console.WriteLine($"\tDatum rođenja: {ucenik.DatumRodenja.ToShortDateString()} \n\tGodine: {ucenik.Starost()} \n\tProsjek: {ucenik.IspisProsjeka()}");
             }
             Console.ReadKey();
 
